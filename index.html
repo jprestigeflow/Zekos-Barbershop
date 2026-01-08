@@ -160,11 +160,11 @@
             border: 1px solid rgba(100,200,255,0.2); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
         }
 
-        /* BARBERS (GRID) - 3 PER ROW */
+        /* BARBERS (GRID) - 5 BARBERS CENTERING */
         .barbers-grid { 
             display: grid; 
-            /* Forces 3 columns for desktop = 2 nice rows of 3 */
-            grid-template-columns: repeat(3, 1fr); 
+            /* Auto-fit with min-width creates dynamic centering. 300px ensures 3 per row on desktop */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 40px; 
             justify-content: center;
         }
@@ -388,11 +388,6 @@
                 <div class="barber-role">BARBER</div>
             </div>
             <div class="barber-card">
-                <img src="Barbers/Ismael.png" class="barber-img" alt="Ismael">
-                <div class="barber-name">ISMAEL</div>
-                <div class="barber-role">BARBER</div>
-            </div>
-            <div class="barber-card">
                 <img src="Barbers/Barzan.png" class="barber-img" alt="Barzan">
                 <div class="barber-name">BARZAN</div>
                 <div class="barber-role">BARBER</div>
@@ -492,34 +487,35 @@
     <section id="products">
         <h2 class="section-title">SHOP <span>ESSENTIALS</span></h2>
         <div class="products-scroller">
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/MONPLATIN CRYSTAL WAX.jpg" alt="MonPlatin Jojoba Crystal Wax"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Jojoba Crystal Wax</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/MONPLATIN MOUSSE_edited_edited.jpg" alt="MonPlatin Classic Mousse"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Classic Mousse</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/NIOXIN_edited_edited.jpg" alt="Nioxin Kit"></div><h4>Nioxin</h4><p style="color:var(--blue-glow); margin-top:5px;">Natural Hair Thinning Kit</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE WAX_edited.jpg" alt="Red One Red Aqua"></div><h4>Red One</h4><p style="color:var(--blue-glow); margin-top:5px;">Red Aqua Hair Wax</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE GREEN MATTE WAX.jpg" alt="Red One Green Matte"></div><h4>Red One</h4><p style="color:var(--blue-glow); margin-top:5px;">Green Matte Hair Wax</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE POWDER.jpg" alt="Red One Powder"></div><h4>Red One</h4><p style="color:var(--blue-glow); margin-top:5px;">Hairstyling Powder</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO SPIDER WAX.jpg" alt="Bandido Spider Web"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Spider Web Wax</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/ORIENTAL OIL.jpg" alt="MonPlatin Oriental Oil"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Oriental Oil</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/FIFTY FIFTY_edited.jpg" alt="MonPlatin Fifty Fifty"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Fifty Fifty For Curly</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO VOLCANO_edited_edited.jpg" alt="Bandido Volcano"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Volcano Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO LAS VEGAS_edited_edited.jpg" alt="Bandido Las Vegas"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Las Vegas Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO WATERFALL_edited.jpg" alt="Bandido Waterfall"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Waterfall Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/AGIVA SEA SALT SPRAY.jpg" alt="Agiva Sea Salt"></div><h4>Agiva</h4><p style="color:var(--blue-glow); margin-top:5px;">Sea Salt Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO ARMY_edited.jpg" alt="Bandido Army"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Army Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/MONPLATIN HAIRSPRAY_edited.jpg" alt="MonPlatin Hair Spray"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Hair Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE LAVENDER MINT.jpg" alt="TeaTree Lavender"></div><h4>TeaTree Shampoo</h4><p style="color:var(--blue-glow); margin-top:5px;">Lavender Mint</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE LEMON SAGE.jpg" alt="TeaTree Lemon Sage"></div><h4>TeaTree Shampoo</h4><p style="color:var(--blue-glow); margin-top:5px;">Lemon Sage</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE SPECIAL.jpg" alt="TeaTree Special"></div><h4>TeaTree Shampoo</h4><p style="color:var(--blue-glow); margin-top:5px;">Special</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REVLON EQUAVE_edited.jpg" alt="Revlon Detangler"></div><h4>Revlon</h4><p style="color:var(--blue-glow); margin-top:5px;">Detangling Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISS PALM BRUSH_edited.jpg" alt="BaBylissPRO Brush"></div><h4>BaBylissPRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Oval Palm Brush</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/WAHL CORDLESS MAGIC CLIP.jpg" alt="WAHL PRO Clip"></div><h4>WAHL PRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Cordless Magic Clip</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/Mon Platin black caviar matte paste.jpg" alt="MonPlatin Matte Paste"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Black Caviar Matte Paste</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISS GOLDFX_edited_edited.jpg" alt="BaBylissPRO GoldFX"></div><h4>BaBylissPRO</h4><p style="color:var(--blue-glow); margin-top:5px;">GoldFX</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/WAHL RETRO T - CUT_edited.jpg" alt="WAHL PRO Retro"></div><h4>WAHL PRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Retro T-Cut</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/L'ANZA SPRAY_edited.jpg" alt="L'anza Oil"></div><h4>L'anza</h4><p style="color:var(--blue-glow); margin-top:5px;">Keratin Oil Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISSPRO LITHIUM.jpg" alt="BaBylissPRO Lithium"></div><h4>BaBylissPRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Lithium FX</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/image2.jpg" alt="Agiva Styling Dust Red"></div><h4>Agiva</h4><p style="color:var(--blue-glow); margin-top:5px;">Styling Dust (Red)</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/image3.jpg" alt="Agiva Styling Dust Green"></div><h4>Agiva</h4><p style="color:var(--blue-glow); margin-top:5px;">Styling Dust (Green)</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/MONPLATIN CRYSTAL WAX.jpg" alt="MonPlatin Jojoba Crystal Wax"></div><h4>MonPlatin</h4><p style="color:var(--gold); margin-top:5px;">Jojoba Crystal Wax</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/MONPLATIN MOUSSE_edited_edited.jpg" alt="MonPlatin Classic Mousse"></div><h4>MonPlatin</h4><p style="color:var(--gold); margin-top:5px;">Classic Mousse</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/NIOXIN_edited_edited.jpg" alt="Nioxin Kit"></div><h4>Nioxin</h4><p style="color:var(--gold); margin-top:5px;">Natural Hair Thinning Kit</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE WAX_edited.jpg" alt="Red One Red Aqua"></div><h4>Red One</h4><p style="color:var(--gold); margin-top:5px;">Red Aqua Hair Wax</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE GREEN MATTE WAX.jpg" alt="Red One Green Matte"></div><h4>Red One</h4><p style="color:var(--gold); margin-top:5px;">Green Matte Hair Wax</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE POWDER.jpg" alt="Red One Powder"></div><h4>Red One</h4><p style="color:var(--gold); margin-top:5px;">Hairstyling Powder</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO SPIDER WAX.jpg" alt="Bandido Spider Web"></div><h4>Bandido</h4><p style="color:var(--gold); margin-top:5px;">Spider Web Wax</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/ORIENTAL OIL.jpg" alt="MonPlatin Oriental Oil"></div><h4>MonPlatin</h4><p style="color:var(--gold); margin-top:5px;">Oriental Oil</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/FIFTY FIFTY_edited.jpg" alt="MonPlatin Fifty Fifty"></div><h4>MonPlatin</h4><p style="color:var(--gold); margin-top:5px;">Fifty Fifty For Curly</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO VOLCANO_edited_edited.jpg" alt="Bandido Volcano"></div><h4>Bandido</h4><p style="color:var(--gold); margin-top:5px;">Volcano Aftershave</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO LAS VEGAS_edited_edited.jpg" alt="Bandido Las Vegas"></div><h4>Bandido</h4><p style="color:var(--gold); margin-top:5px;">Las Vegas Aftershave</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO WATERFALL_edited.jpg" alt="Bandido Waterfall"></div><h4>Bandido</h4><p style="color:var(--gold); margin-top:5px;">Waterfall Aftershave</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/AGIVA SEA SALT SPRAY.jpg" alt="Agiva Sea Salt"></div><h4>Agiva</h4><p style="color:var(--gold); margin-top:5px;">Sea Salt Spray</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO ARMY_edited.jpg" alt="Bandido Army"></div><h4>Bandido</h4><p style="color:var(--gold); margin-top:5px;">Army Aftershave</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/MONPLATIN HAIRSPRAY_edited.jpg" alt="MonPlatin Hair Spray"></div><h4>MonPlatin</h4><p style="color:var(--gold); margin-top:5px;">Hair Spray</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE LAVENDER MINT.jpg" alt="TeaTree Lavender"></div><h4>TeaTree Shampoo</h4><p style="color:var(--gold); margin-top:5px;">Lavender Mint</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE LEMON SAGE.jpg" alt="TeaTree Lemon Sage"></div><h4>TeaTree Shampoo</h4><p style="color:var(--gold); margin-top:5px;">Lemon Sage</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE SPECIAL.jpg" alt="TeaTree Special"></div><h4>TeaTree Shampoo</h4><p style="color:var(--gold); margin-top:5px;">Special</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REVLON EQUAVE_edited.jpg" alt="Revlon Detangler"></div><h4>Revlon</h4><p style="color:var(--gold); margin-top:5px;">Detangling Spray</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISS PALM BRUSH_edited.jpg" alt="BaBylissPRO Brush"></div><h4>BaBylissPRO</h4><p style="color:var(--gold); margin-top:5px;">Oval Palm Brush</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/WAHL CORDLESS MAGIC CLIP.jpg" alt="WAHL PRO Clip"></div><h4>WAHL PRO</h4><p style="color:var(--gold); margin-top:5px;">Cordless Magic Clip</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/Mon Platin black caviar matte paste.jpg" alt="MonPlatin Matte Paste"></div><h4>MonPlatin</h4><p style="color:var(--gold); margin-top:5px;">Black Caviar Matte Paste</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISS GOLDFX_edited_edited.jpg" alt="BaBylissPRO GoldFX"></div><h4>BaBylissPRO</h4><p style="color:var(--gold); margin-top:5px;">GoldFX</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/WAHL RETRO T - CUT_edited.jpg" alt="WAHL PRO Retro"></div><h4>WAHL PRO</h4><p style="color:var(--gold); margin-top:5px;">Retro T-Cut</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/L'ANZA SPRAY_edited.jpg" alt="L'anza Oil"></div><h4>L'anza</h4><p style="color:var(--gold); margin-top:5px;">Keratin Oil Spray</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISSPRO LITHIUM.jpg" alt="BaBylissPRO Lithium"></div><h4>BaBylissPRO</h4><p style="color:var(--gold); margin-top:5px;">Lithium FX</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/blackcaviarmattepaste.jpg" alt="Black Caviar Matte Paste"></div><h4>MonPlatin</h4><p style="color:var(--gold); margin-top:5px;">Black Caviar Matte Paste (New)</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/image2.jpg" alt="Agiva Styling Dust Red"></div><h4>Agiva</h4><p style="color:var(--gold); margin-top:5px;">Styling Dust (Red)</p></div>
+            <div class="glass-panel product-card"><div class="product-img"><img src="Products/image3.jpg" alt="Agiva Styling Dust Green"></div><h4>Agiva</h4><p style="color:var(--gold); margin-top:5px;">Styling Dust (Green)</p></div>
         </div>
     </section>
 
@@ -550,7 +546,7 @@
             <div class="glass-panel">
                 <h3 style="margin-bottom:10px; font-family:'Cinzel'">ZEKO'S BARBER SHOP</h3>
                 <p style="color:#aaa; margin-bottom:5px;">786 Concession St, Hamilton, ON</p>
-                <p style="color:var(--blue-glow); margin-bottom:20px; font-weight:700;">(905) 383-9356</p>
+                <p style="color:var(--gold); margin-bottom:20px; font-weight:700;">(905) 383-9356</p>
                 
                 <h3 style="margin-bottom:10px; font-family:'Cinzel'">HOURS</h3>
                 <p style="color:#aaa; margin-bottom:20px;">
@@ -567,7 +563,7 @@
         </div>
     </section>
 
-    <footer style="text-align:center; padding:60px 20px; background:#02050a; border-top: 1px solid rgba(100, 200, 255, 0.1);">
+    <footer style="text-align:center; padding:60px 20px; background:#050505; border-top: 1px solid rgba(212, 175, 55, 0.1);">
         <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 40px;">
             <a href="https://www.instagram.com/zekosbarbershop" target="_blank" class="social-link">INSTAGRAM</a>
             <a href="https://www.facebook.com/ZQbarber" target="_blank" class="social-link">FACEBOOK</a>
