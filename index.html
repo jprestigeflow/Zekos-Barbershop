@@ -160,10 +160,9 @@
             border: 1px solid rgba(100,200,255,0.2); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
         }
 
-        /* BARBERS (GRID) - 5 BARBERS CENTERING */
+        /* BARBERS (GRID) */
         .barbers-grid { 
             display: grid; 
-            /* Auto-fit with min-width creates dynamic centering. 300px ensures 3 per row on desktop */
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 40px; 
             justify-content: center;
@@ -261,7 +260,7 @@
         /* PORTFOLIO (GRID 4x2) */
         .portfolio-grid { 
             display: grid; 
-            grid-template-columns: repeat(4, 1fr); /* FORCED 4 PER ROW */
+            grid-template-columns: repeat(4, 1fr); 
             gap: 20px; 
         }
         .portfolio-item { 
@@ -290,18 +289,11 @@
 
         /* --- MOBILE OPTIMIZATION --- */
         @media (max-width: 1024px) {
-            .barbers-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2x3 on Tablet */
-            }
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2x4 on Tablet */
-            }
+            .barbers-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
-            nav {
-                width: 90%; padding: 15px 20px; overflow-x: auto; justify-content: flex-start;
-                -ms-overflow-style: none; scrollbar-width: none;
-            }
+            nav { width: 90%; padding: 15px 20px; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
             nav::-webkit-scrollbar { display: none; }
             #hero { padding-top: 100px; }
             .hero-logo-container { width: 250px; height: 250px; }
@@ -314,14 +306,8 @@
             .about-img { width: 100%; }
             .contact-layout { grid-template-columns: 1fr; }
             .section-title { font-size: 2.2rem; margin-bottom: 40px; }
-            
-            /* Stack haircuts/barbers on mobile */
-            .barbers-grid {
-                grid-template-columns: 1fr; 
-            }
-            .portfolio-grid {
-                grid-template-columns: 1fr; 
-            }
+            .barbers-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
         }
 
     </style>
@@ -397,11 +383,6 @@
                 <div class="barber-name">AHMET</div>
                 <div class="barber-role">BARBER</div>
             </div>
-            <div class="barber-card">
-                <img src="Barbers/Rabin.png" class="barber-img" alt="Rabin">
-                <div class="barber-name">RABIN</div>
-                <div class="barber-role">BARBER</div>
-            </div>
         </div>
     </section>
 
@@ -447,39 +428,10 @@
         <h2 class="section-title">CLIENT <span>LOVE</span></h2>
         <div class="ticker-wrap">
             <div class="ticker-track">
-                
                 <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">JAMES H.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Took my 10 year old here for his back-to-school cut. The barbers were so patient with him and he left feeling confident. Best shop in Hamilton."</p></div>
                 <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">SARAH M.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"The receptionist is incredibly welcoming and the vibe in the shop is just pure class. You feel taken care of the moment you walk in."</p></div>
                 <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">MIKE R.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Top notch service. Zeko and the team don't rush, they make sure everything is perfect. A proper barbershop experience."</p></div>
                 <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">DANIEL K.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"My 14 year old son is picky about his hair, but he absolutely loved the fade he got here. We aren't going anywhere else."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">ALEX P.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Great atmosphere, professional staff, and the cleanest cut I've had in years. Highly recommend."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">CHRIS T.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"The hot towel shave is a game changer. Walked out feeling like a new man. Respectful and talented crew."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">JASON L.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Clean shop, good music, great conversation. It's more than just a haircut, it's a great experience."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">RYAN B.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Brought my two boys here and the barbers were excellent with them. We've finally found our family barber."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">DAVID W.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Always a 5 star experience. The fade is consistent every single time. Zeko is a master."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">KEVIN S.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Friendly staff and very professional. The receptionist made booking easy and the cut was perfect."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">ERIC M.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"The attention to detail here is unmatched. They really take pride in their work. Highly recommended."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">TOM H.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Took my little brother here and they treated him like a king. He loved the experience."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">SAMUEL J.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Best atmosphere in the city. The barbers are skilled and respectful. Always a pleasure coming here."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">MARK P.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"I've been to many shops but this one stands out. Great service, fair prices, and amazing cuts."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">ANTHONY C.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"My 10 year old actually looks forward to his haircuts now. The staff makes everyone feel welcome."</p></div>
-
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">JAMES H.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Took my 10 year old here for his back-to-school cut. The barbers were so patient with him and he left feeling confident. Best shop in Hamilton."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">SARAH M.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"The receptionist is incredibly welcoming and the vibe in the shop is just pure class. You feel taken care of the moment you walk in."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">MIKE R.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Top notch service. Zeko and the team don't rush, they make sure everything is perfect. A proper barbershop experience."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">DANIEL K.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"My 14 year old son is picky about his hair, but he absolutely loved the fade he got here. We aren't going anywhere else."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">ALEX P.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Great atmosphere, professional staff, and the cleanest cut I've had in years. Highly recommend."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">CHRIS T.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"The hot towel shave is a game changer. Walked out feeling like a new man. Respectful and talented crew."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">JASON L.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Clean shop, good music, great conversation. It's more than just a haircut, it's a great experience."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">RYAN B.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Brought my two boys here and the barbers were excellent with them. We've finally found our family barber."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">DAVID W.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Always a 5 star experience. The fade is consistent every single time. Zeko is a master."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">KEVIN S.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Friendly staff and very professional. The receptionist made booking easy and the cut was perfect."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">ERIC M.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"The attention to detail here is unmatched. They really take pride in their work. Highly recommended."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">TOM H.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Took my little brother here and they treated him like a king. He loved the experience."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">SAMUEL J.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"Best atmosphere in the city. The barbers are skilled and respectful. Always a pleasure coming here."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">MARK P.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"I've been to many shops but this one stands out. Great service, fair prices, and amazing cuts."</p></div>
-                <div class="review-card-ticker"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;"><strong style="font-family:'Cinzel';color:white;font-size:1.1rem;">ANTHONY C.</strong><div style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div><p style="color:#ccc;font-style:italic;line-height:1.5;font-size:0.9rem;">"My 10 year old actually looks forward to his haircuts now. The staff makes everyone feel welcome."</p></div>
-
             </div>
         </div>
     </section>
@@ -493,29 +445,6 @@
             <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE WAX_edited.jpg" alt="Red One Red Aqua"></div><h4>Red One</h4><p style="color:var(--blue-glow); margin-top:5px;">Red Aqua Hair Wax</p></div>
             <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE GREEN MATTE WAX.jpg" alt="Red One Green Matte"></div><h4>Red One</h4><p style="color:var(--blue-glow); margin-top:5px;">Green Matte Hair Wax</p></div>
             <div class="glass-panel product-card"><div class="product-img"><img src="Products/REDONE POWDER.jpg" alt="Red One Powder"></div><h4>Red One</h4><p style="color:var(--blue-glow); margin-top:5px;">Hairstyling Powder</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO SPIDER WAX.jpg" alt="Bandido Spider Web"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Spider Web Wax</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/ORIENTAL OIL.jpg" alt="MonPlatin Oriental Oil"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Oriental Oil</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/FIFTY FIFTY_edited.jpg" alt="MonPlatin Fifty Fifty"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Fifty Fifty For Curly</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO VOLCANO_edited_edited.jpg" alt="Bandido Volcano"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Volcano Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO LAS VEGAS_edited_edited.jpg" alt="Bandido Las Vegas"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Las Vegas Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO WATERFALL_edited.jpg" alt="Bandido Waterfall"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Waterfall Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/AGIVA SEA SALT SPRAY.jpg" alt="Agiva Sea Salt"></div><h4>Agiva</h4><p style="color:var(--blue-glow); margin-top:5px;">Sea Salt Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BANDIDO ARMY_edited.jpg" alt="Bandido Army"></div><h4>Bandido</h4><p style="color:var(--blue-glow); margin-top:5px;">Army Aftershave</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/MONPLATIN HAIRSPRAY_edited.jpg" alt="MonPlatin Hair Spray"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Hair Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE LAVENDER MINT.jpg" alt="TeaTree Lavender"></div><h4>TeaTree Shampoo</h4><p style="color:var(--blue-glow); margin-top:5px;">Lavender Mint</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE LEMON SAGE.jpg" alt="TeaTree Lemon Sage"></div><h4>TeaTree Shampoo</h4><p style="color:var(--blue-glow); margin-top:5px;">Lemon Sage</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/TEATREE SPECIAL.jpg" alt="TeaTree Special"></div><h4>TeaTree Shampoo</h4><p style="color:var(--blue-glow); margin-top:5px;">Special</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/REVLON EQUAVE_edited.jpg" alt="Revlon Detangler"></div><h4>Revlon</h4><p style="color:var(--blue-glow); margin-top:5px;">Detangling Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISS PALM BRUSH_edited.jpg" alt="BaBylissPRO Brush"></div><h4>BaBylissPRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Oval Palm Brush</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/WAHL CORDLESS MAGIC CLIP.jpg" alt="WAHL PRO Clip"></div><h4>WAHL PRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Cordless Magic Clip</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/Mon Platin black caviar matte paste.jpg" alt="MonPlatin Matte Paste"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Black Caviar Matte Paste</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISS GOLDFX_edited_edited.jpg" alt="BaBylissPRO GoldFX"></div><h4>BaBylissPRO</h4><p style="color:var(--blue-glow); margin-top:5px;">GoldFX</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/WAHL RETRO T - CUT_edited.jpg" alt="WAHL PRO Retro"></div><h4>WAHL PRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Retro T-Cut</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/L'ANZA SPRAY_edited.jpg" alt="L'anza Oil"></div><h4>L'anza</h4><p style="color:var(--blue-glow); margin-top:5px;">Keratin Oil Spray</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/BABYLISSPRO LITHIUM.jpg" alt="BaBylissPRO Lithium"></div><h4>BaBylissPRO</h4><p style="color:var(--blue-glow); margin-top:5px;">Lithium FX</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/blackcaviarmattepaste.jpg" alt="Black Caviar Matte Paste"></div><h4>MonPlatin</h4><p style="color:var(--blue-glow); margin-top:5px;">Black Caviar Matte Paste (New)</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/image2.jpg" alt="Agiva Styling Dust Red"></div><h4>Agiva</h4><p style="color:var(--blue-glow); margin-top:5px;">Styling Dust (Red)</p></div>
-            <div class="glass-panel product-card"><div class="product-img"><img src="Products/image3.jpg" alt="Agiva Styling Dust Green"></div><h4>Agiva</h4><p style="color:var(--blue-glow); margin-top:5px;">Styling Dust (Green)</p></div>
         </div>
     </section>
 
